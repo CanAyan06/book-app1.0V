@@ -1,0 +1,60 @@
+
+<div class="film-tanitimi">
+    <h1>Film Tanıtımları</h1>
+    <button class="btn" type="button">
+        <strong>Books Library</strong>
+        
+        <div id="container-stars">
+          <div id="stars"></div>
+        </div>
+      
+        <div id="glow">
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </button>
+      <button class="btn">
+        SEPET
+      </button>
+      
+      
+      
+      
+    
+    <table>
+        <thead>
+            <tr>
+                <th>
+               
+                <input type="Ara">
+                
+                <button id="searchButton" class="mat-flat-button" color="primary"><span>Search</span> </button>
+                <button mat-flat-button color="primary"><span>Setting</span> </button>
+                <mat-icon>google books<span>google books</span></mat-icon>
+            </th>
+            </tr>
+        </thead>
+        <tbody>
+           @for (item of bookList; track $index) {
+            <tr>
+                <td class="resim-sutunu"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhEb9SHa0clbEGs2UM3h4RBqrmIfdKW5_7BBIvAVRsNA&s" alt="Film Resmi"></td>
+                <td>{{item.name}}</td>
+                <td>{{item.author}}</td>
+                <td>{{item.year}}</td>
+                <td>{{item.star}}</td>
+                <td>{{item.category}}</td>
+                <td>{{item.description}}</td>
+                <td>01/01/2022</td>
+                <button> <span>Add To Shelf</span>
+                </button>
+                
+               
+                
+            </tr>
+
+           }
+               
+            
+        </tbody>
+    </table>
+</div>
